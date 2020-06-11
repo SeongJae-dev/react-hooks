@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from "./Component/Counter";
 import Info from "./Component/Info";
+import Average from "./Component/Average";
 
 function App() {
   const [visible, setVisible] = useState(false);
   return (
-      // <Counter />;
       <div>
+        <Counter />;
         <button
             onClick={() => {
               setVisible(!visible);
@@ -18,6 +19,7 @@ function App() {
         </button>
         <hr/>
         {visible && <Info/>}
+        <Average/>
       </div>
   );
 }
